@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Pattern along Path</name>
+    <id>org.inkscape.generate.path_along_path</id>
+    <dependency type="file" location="inx">pathmodifier.py</dependency>
+    <param name="tab" type="notebook">
+        <page name="Options" gui-text="Options">
+        <param name="copymode" type="optiongroup" appearance="combo" gui-text="Copies of the pattern:">
+            <option value="Single">Single</option>
+            <option value="Single, stretched">Single, stretched</option>
+            <option value="Repeated">Repeated</option>
+            <option value="Repeated, stretched">Repeated, stretched</option>
+        </param>
+        <param name="kind" type="optiongroup" appearance="combo" gui-text="Deformation type:">
+            <option value="Snake">Snake</option>
+            <option value="Ribbon">Ribbon</option>
+        </param>
+        <param name="space" type="float" gui-text="Space between copies:" min="-10000.0" max="10000.0">0.0</param>
+        <param name="noffset" type="float" gui-text="Normal offset:" min="-10000.0" max="10000.0">0.0</param>
+        <param name="toffset" type="float" gui-text="Tangential offset:" min="-10000.0" max="10000.0">0.0</param>
+        <param name="vertical" type="bool" gui-text="Pattern is vertical">false</param>
+        <param name="duplicate" type="bool" gui-text="Duplicate the pattern before deformation">true</param>
+        </page>
+        <page name="Help" gui-text="Help">
+            <label>This effect bends a pattern along arbitrary "skeleton" paths. The pattern is the topmost object in the selection, groups of paths, shapes or clones are allowed. 
+            Text can also be used as pattern, but has to be converted to path first. The other selected items are skeleton paths, and the pattern is applied to each of them</label>
+
+            <label>There are two different deformation modes. With "Snake", vertical lines will be perpendicular to the skeleton and horizontal lines will be parallel 
+            (angles are preserved before stretching for paths with high node density). With "Ribbon", vertical 
+            lines will remain vertical (lengths are preserved).</label>
+
+            <label>The "vertical" option switches the role of horizontal and vertical lines in the deformation mode. </label>
+
+            <label>Note that the extension does not add additional nodes to the pattern paths. For high curvature, the result in 
+            may therefore look aesthetically unpleasing. To avoid this, either add addition nodes manually, or convert all segments to curves beforehand.</label>
+        </page>
+    </param>
+    <effect>
+    <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Generate from Path"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">pathalongpath.py</command>
+    </script>
+</inkscape-extension>

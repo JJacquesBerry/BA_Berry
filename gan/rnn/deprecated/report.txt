@@ -1,0 +1,30 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'recurrent_nn_V2.ipynb'
+ outputting to 'test.ipynb'
+--------------------------------------------------------------------------------
+
+24:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+25:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+27:35: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+28:33: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+30:8: INFO: Added keywords to args of function 'tf.transpose'
+47:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+47:26: INFO: Changing labels arg of tf.nn.softmax_cross_entropy_with_logits to tf.stop_gradient(labels). Please check this transformation.
+
+48:16: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+50:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+51:17: INFO: Renamed 'tf.initialize_all_variables' to 'tf.compat.v1.initialize_all_variables'
+64:23: INFO: Added keywords to args of function 'tf.argmax'
+64:49: INFO: Added keywords to args of function 'tf.argmax'
+66:15: INFO: Added keywords to args of function 'tf.reduce_mean'
+--------------------------------------------------------------------------------
+

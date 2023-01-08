@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<keys name="Adobe Illustrator" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- inherit -->
+<xi:include href="inkscape.xml" />
+
+<!--  
+This file contains a profile of keyboard shortcuts for Inkscape in the
+style of Adobe Illustrator CC 2020. If the binding is not specified here, it
+is still the Inkscape default. In case of conflict, these bindings override
+those from the Inkscape defaults.
+
+See default.xml for more information.  
+-->
+
+<!-- File -->
+
+  <bind key="n" modifiers="Primary,Shift" action="FileTemplates" display="true" />
+
+  <!-- Revert -->
+  <bind key="z" modifiers="Primary,Alt" action="FileRevert" display="true" />
+
+  <!-- Place -->
+  <bind key="p" modifiers="Primary,Shift" action="FileImport" display="true" />
+  
+<!-- Tools -->
+
+  <!-- Selection (arrow) tool + Free Transform Tool -->
+  <bind key="v" action="ToolSelector" display="true" />
+  <bind key="e" action="ToolSelector" />
+
+  <!-- Direct Selection tool -->
+  <bind key="a" action="ToolNode" display="true" />
+  
+  <!-- Warp/Pucker/Bloat/Wrinkle tool -->
+  <bind key="r" modifiers="Shift" action="ToolTweak" display="true" />
+
+  <!-- Pen tool -->
+  <bind key="p" action="ToolPen" display="true" />
+
+  <!-- Type tool -->
+  <bind key="t" action="ToolText" display="true" />
+
+  <!-- Rectangle tool -->
+  <bind key="m" action="ToolRect" display="true" />
+
+  <!-- Ellipse tool -->
+  <bind key="l" action="ToolArc" display="true" />
+
+  <!-- Paintbrush tool -->
+  <bind key="b" action="ToolCalligraphic" display="true" />
+
+  <!-- Pencil tool -->
+  <bind key="n" action="ToolPencil" display="true" />
+
+  <!-- Eye-dropper tool -->
+  <bind key="i" action="ToolDropper" display="true" />
+
+  <!-- Live Paint Bucket tool -->
+  <bind key="k" action="ToolPaintBucket" display="true" />
+
+  <!-- Symbol Sprayer -->
+  <bind key="s" modifiers="Shift" action="ToolSpray" display="true" />
+  
+<!-- Zoom -->
+
+  <!-- Zoom in and Out -->
+  <bind gaction="win.canvas-zoom-in"   keys="&lt;primary&gt;plus,  &lt;primary&gt;equal,      &lt;primary&gt;KP_Add"/>
+  <bind gaction="win.canvas-zoom-out"  keys="&lt;primary&gt;minus, &lt;primary&gt;underscore, &lt;primary&gt;KP_Subtract"/>
+
+  <!-- Show Artboard -->
+  <bind gaction="win.canvas-zoom-page" keys="&lt;primary&gt;0,     &lt;primary&gt;KP_0"/>
+  <!-- Actual Size -->
+  <bind gaction="win.canvas-zoom-1-1"  keys="&lt;primary&gt;1,     &lt;primary&gt;KP_1"/>
+  
+<!-- View -->
+
+  <!--Show Grid Ctrl+" -->
+  <bind key="quotedbl" modifiers="Primary" action="ToggleGrid" display="true" />
+  
+  <!-- Toggle Guides -->
+  <bind key="semicolon" modifiers="Primary" action="ToggleGuides" display="true" />
+  
+  <!-- Toggle Snap -->
+  <bind gaction="doc.snap-global-toggle" keys="&lt;primary&gt;&lt;shift&gt;quotedbl, &lt;primary&gt;&lt;alt&gt;apostrophe"/>
+
+  <!-- Toggle View -->
+  <bind gaction="win.canvas-display-mode-cycle" keys="&lt;primary&gt;y"/>
+
+<!-- Edit -->
+
+  <bind key="b" modifiers="Primary,Shift" action="EditPasteInPlace" display="true" />
+  <bind key="a" modifiers="Primary,Shift" action="EditDeselect" display="true"/>
+
+  <!-- Swap fill and stroke -->
+  <bind key="x" modifiers="Shift" action="EditSwapFillStroke" display="true" />
+  
+  <!-- Raising and Lowering Selections -->
+  <bind key="bracketright" modifiers="Primary,Alt" action="EditSelectNext" display="true" />
+  <bind key="bracketleft" modifiers="Primary,Alt" action="EditSelectPrev" display="true" />
+
+  <bind key="bracketright" modifiers="Primary,Shift" action="SelectionToFront" display="true" />
+  <bind key="bracketleft" modifiers="Primary,Shift" action="SelectionToBack" display="true" />
+
+  <bind key="bracketright" modifiers="Primary" action="SelectionRaise" display="true" />
+  <bind key="bracketleft" modifiers="Primary" action="SelectionLower" display="true" />
+
+  <!--Object to Guides -->
+  <bind key="5" modifiers="Primary" action="ObjectsToGuides" display="true" />
+  
+  <!-- Make and Release Clipping Masks -->
+  <bind key="7" modifiers="Primary" action="ObjectSetClipPath" />
+  <bind key="7" modifiers="Primary,Alt" action="ObjectUnSetClipPath" />
+
+  <!-- Add new symbol -->
+  <bind key="F8" action="EditClone" display="true"/>
+
+<!-- Dialog -->
+
+  <!-- Preferences -->
+  <bind key="k" modifiers="Primary" action="DialogPreferences" display="true" />
+  
+  <!-- Document Setup -->
+  <bind key="p" modifiers="Primary,Alt" action="DialogDocumentProperties" display="true" />
+  
+  <!-- Panel Shortcuts -->
+  <bind key="F6" action="DialogSwatches" display="true"/>
+  <bind key="F7" action="DialogLayers" display="true" />
+  <bind key="F7" modifiers="Shift" action="DialogAlignDistribute" display="true" />
+  <bind key="F8" modifiers="Shift" action="DialogTransform" display="true"/>
+  <bind key="F9" modifiers="Primary" action="DialogFillStroke"/>
+  <bind key="F10" modifiers="Primary" action="DialogFillStroke" display="true"/>
+  <bind key="F10" modifiers="Primary,Shift" action="DialogFillStroke" display="true"/>
+  <bind key="F11" modifiers="Primary" action="DialogObjectProperties" display="true" />
+  <bind key="t" modifiers="Primary" action="DialogText" display="true"/>
+  <bind key="t" modifiers="Primary,Alt" action="DialogText" />
+
+</keys>
